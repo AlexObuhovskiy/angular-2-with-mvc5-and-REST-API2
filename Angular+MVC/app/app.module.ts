@@ -9,10 +9,11 @@ import { routing } from './app.routing';
 import { HomeComponent } from './components/home.component';
 import { UserService } from './Service/user.service';
 import { UserComponent } from './components/user.component';
+import { AboutComponent } from './components/about.component';
 
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, Ng2Bs3ModalModule],
-    declarations: [AppComponent, HomeComponent, UserComponent],
+    declarations: [AppComponent, HomeComponent, AboutComponent],
     providers: [{ provide: APP_BASE_HREF, useValue: '/' }, UserService],
     bootstrap: [AppComponent]
 })

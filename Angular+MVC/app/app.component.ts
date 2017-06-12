@@ -7,14 +7,14 @@
                        <div class='container-fluid'>
                          <ul class='nav navbar-nav'>
                            <li><a [routerLink]="['home']">Home</a></li>
-                           <li><a [routerLink]="['user']">Users Management</a></li>
+                           <li><a [routerLink]="['about-us']">About Us</a></li>
                       </ul>
                       </div>
                  </nav>    
               <div class='container'>
                 <router-outlet></router-outlet>
               </div>
-             </div>          
+             </div>
 `
 })
 
