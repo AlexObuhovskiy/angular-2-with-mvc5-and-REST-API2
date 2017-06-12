@@ -1,0 +1,7 @@
+Angular+MVC/app/*.js
+Angular+MVC/app/*.js.map
+Angular+MVC/app/**/*.js
+Angular+MVC/app/**/*.js.map
+Angular+MVC/bin/**/*
+Angular+MVC/node_modules/**/*
+Angular+MVC/obj/**/*
