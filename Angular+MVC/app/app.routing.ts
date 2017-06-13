@@ -1,8 +1,9 @@
 ﻿import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home.component';
-import { AboutComponent } from './components/about.component';
-
+import Homecomponent = require("./nodes/home/home.component");
+import HomeComponent = Homecomponent.HomeComponent;
+import Aboutcomponent = require("./nodes/about/about.component");
+import AboutComponent = Aboutcomponent.AboutComponent;
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
