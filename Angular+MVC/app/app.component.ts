@@ -2,19 +2,14 @@
 @Component({
     selector: "user-app",
     template: `
-               <div>
-                  <nav class='navbar navbar-inverse'>
-                       <div class='container-fluid'>
-                         <ul class='nav navbar-nav'>
-                           <li><a [routerLink]="['home']">Home</a></li>
-                           <li><a [routerLink]="['about-us']">About Us</a></li>
-                      </ul>
-                      </div>
-                 </nav>    
-              <div class='container'>
+        <div class="content">
+            <div class="left-menu">
+                <left-menu></left-menu>
+            </div>
+            <div class="main" id="main" style="transition: margin-left .5s; padding: 20px; margin: -40px 0 0 10px">
                 <router-outlet></router-outlet>
-              </div>
-             </div>
+            </div>
+        </div>
 `
 })
 
