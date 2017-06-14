@@ -7,14 +7,17 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import Leftmenucomponent = require("./left-menu/left-menu.component");
 import LeftMenuComponent = Leftmenucomponent.LeftMenuComponent;
-import Homecomponent = require("./nodes/home/home.component");
-import HomeComponent = Homecomponent.HomeComponent;
+import Homemodule = require("./nodes/home/home.module");
+import HomeModule = Homemodule.HomeModule;
 import Aboutcomponent = require("./nodes/about/about.component");
 import AboutComponent = Aboutcomponent.AboutComponent;
+import HttpService = require("./services/httpService");
+import HttpService1 = HttpService.HttpService;
+
 @NgModule({
-    imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing],
-    declarations: [AppComponent, HomeComponent, AboutComponent, LeftMenuComponent ],
-    providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, HomeModule],
+    declarations: [AppComponent, AboutComponent, LeftMenuComponent ],
+    providers: [{ provide: APP_BASE_HREF, useValue: '/' }, HttpService1],
     bootstrap: [AppComponent]
 })
 

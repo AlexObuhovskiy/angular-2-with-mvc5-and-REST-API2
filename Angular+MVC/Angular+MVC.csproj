@@ -163,23 +163,24 @@
     <Compile Include="Controllers\BaseAPIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserAPIController.cs" />
-    <Compile Include="DBContext\TblUser.cs">
-      <DependentUpon>UserDBEnteties.tt</DependentUpon>
+    <Compile Include="Controllers\WoodAPIController.cs" />
+    <Compile Include="DBContext\Product.cs">
+      <DependentUpon>WoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\UserDBEnteties.Context.cs">
+    <Compile Include="DBContext\WoodModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBEnteties.Context.tt</DependentUpon>
+      <DependentUpon>WoodModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\UserDBEnteties.cs">
+    <Compile Include="DBContext\WoodModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBEnteties.tt</DependentUpon>
+      <DependentUpon>WoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\UserDBEnteties.Designer.cs">
+    <Compile Include="DBContext\WoodModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBEnteties.edmx</DependentUpon>
+      <DependentUpon>WoodModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,21 +189,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\nodes\not-used\Components\user.component.html" />
-    <Content Include="App_Data\UserDB.mdf" />
-    <Content Include="App_Data\UserDB_log.ldf">
-      <DependentUpon>UserDB.mdf</DependentUpon>
+    <Content Include="App_Data\WoodDB.mdf" />
+    <Content Include="App_Data\WoodDB_log.ldf">
+      <DependentUpon>WoodDB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DBContext\UserDBEnteties.Context.tt">
+    <Content Include="DBContext\WoodModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UserDBEnteties.Context.cs</LastGenOutput>
-      <DependentUpon>UserDBEnteties.edmx</DependentUpon>
+      <DependentUpon>WoodModel.edmx</DependentUpon>
+      <LastGenOutput>WoodModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DBContext\UserDBEnteties.tt">
+    <Content Include="DBContext\WoodModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserDBEnteties.edmx</DependentUpon>
-      <LastGenOutput>UserDBEnteties.cs</LastGenOutput>
+      <DependentUpon>WoodModel.edmx</DependentUpon>
+      <LastGenOutput>WoodModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -217,14 +218,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="package.json" />
-    <EntityDeploy Include="DBContext\UserDBEnteties.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserDBEnteties.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DBContext\UserDBEnteties.edmx.diagram">
-      <DependentUpon>UserDBEnteties.edmx</DependentUpon>
-    </Content>
     <Content Include="app\left-menu\left-menu.component.css" />
+    <EntityDeploy Include="DBContext\WoodModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WoodModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DBContext\WoodModel.edmx.diagram">
+      <DependentUpon>WoodModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -279,6 +280,9 @@
     <TypeScriptCompile Include="app\app.routing.ts" />
     <TypeScriptCompile Include="app\nodes\about\about.component.ts" />
     <TypeScriptCompile Include="app\nodes\home\home.component.ts" />
+    <TypeScriptCompile Include="app\nodes\home\home.module.ts" />
+    <TypeScriptCompile Include="app\nodes\home\home.service.ts" />
+    <TypeScriptCompile Include="app\nodes\home\models\product.ts" />
     <TypeScriptCompile Include="app\nodes\not-used\Components\user.component.ts" />
     <TypeScriptCompile Include="app\left-menu\left-menu.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
@@ -286,6 +290,10 @@
     <TypeScriptCompile Include="app\nodes\not-used\Service\user.service.ts" />
     <TypeScriptCompile Include="app\nodes\not-used\shared\enum.ts" />
     <TypeScriptCompile Include="app\nodes\not-used\shared\global.ts" />
+    <TypeScriptCompile Include="app\services\httpService.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\SharedStrings.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
