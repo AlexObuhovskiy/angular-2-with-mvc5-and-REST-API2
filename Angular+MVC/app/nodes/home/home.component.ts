@@ -5,6 +5,7 @@ import Product = require("./models/product");
 import ProductModel = Product.ProductModel;
 
 @Component({
+    providers: [ProductService],
     template: `<img src="../../images/users.png" style="text-align:center"/>`
 })
 
