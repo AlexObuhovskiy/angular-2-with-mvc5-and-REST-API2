@@ -1,5 +1,5 @@
 ﻿import { Component, AfterViewInit } from "@angular/core";
-import Productservice = require("./home.service");
+import Productservice = require("./product.service");
 import ProductService = Productservice.ProductService;
 import Product = require("./models/product");
 import ProductModel = Product.ProductModel;

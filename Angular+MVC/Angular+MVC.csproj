@@ -281,7 +281,7 @@
     <TypeScriptCompile Include="app\nodes\about\about.component.ts" />
     <TypeScriptCompile Include="app\nodes\home\home.component.ts" />
     <TypeScriptCompile Include="app\nodes\home\home.module.ts" />
-    <TypeScriptCompile Include="app\nodes\home\home.service.ts" />
+    <TypeScriptCompile Include="app\nodes\home\product.service.ts" />
     <TypeScriptCompile Include="app\nodes\home\models\product.ts" />
     <TypeScriptCompile Include="app\nodes\not-used\Components\user.component.ts" />
     <TypeScriptCompile Include="app\left-menu\left-menu.component.ts" />
