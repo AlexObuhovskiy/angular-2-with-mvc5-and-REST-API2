@@ -1,4 +1,4 @@
-﻿import { Component, AfterViewInit } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import Productservice = require("./product.service");
 import ProductService = Productservice.ProductService;
 import Product = require("./models/product");
@@ -6,20 +6,21 @@ import ProductModel = Product.ProductModel;
 
 @Component({
     providers: [ProductService],
-    template: `<img src="../../images/users.png" style="text-align:center"/>`
+    template: `
+        <grid [products]="products"></grid>
+        <img src="../../images/users.png" style="text-align:center"/>
+    `
 })
 
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
     products: ProductModel[];
 
-    constructor(private woodService: ProductService) {
-        
-    }
+    constructor(private woodService: ProductService) { }
 
-    ngAfterViewInit() {
-        this.woodService.getProducts().subscribe((product: ProductModel[]) => {
-            this.products = product;
-            console.log(this.products);
-        });
+    ngOnInit() {
+        this.woodService.getProducts()
+            .subscribe((product: ProductModel[]) => {
+                this.products = product;
+            });
     }
 }

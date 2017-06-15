@@ -118,6 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>О компании</value>
+    <value>Про компанію</value>
+  </data>
+  <data name="ProductType_Bead" xml:space="preserve">
+    <value>Штапік</value>
+  </data>
+  <data name="ProductType_Lining" xml:space="preserve">
+    <value>Вагонка</value>
+  </data>
+  <data name="ProductType_Platbands" xml:space="preserve">
+    <value>Налічник</value>
+  </data>
+  <data name="ProductType_Plinth" xml:space="preserve">
+    <value>Плінтус</value>
+  </data>
+  <data name="WoodType_Alder" xml:space="preserve">
+    <value>Вільха</value>
+  </data>
+  <data name="WoodType_Ash" xml:space="preserve">
+    <value>Ясен</value>
+  </data>
+  <data name="WoodType_Aspen" xml:space="preserve">
+    <value>Осика</value>
+  </data>
+  <data name="WoodType_Linden" xml:space="preserve">
+    <value>Липа</value>
+  </data>
+  <data name="WoodType_Oak" xml:space="preserve">
+    <value>Дуб</value>
+  </data>
+  <data name="WoodType_Pine" xml:space="preserve">
+    <value>Сосна</value>
   </data>
 </root>
