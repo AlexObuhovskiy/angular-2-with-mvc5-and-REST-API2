@@ -32,6 +32,6 @@ export class GridComponent {
     }
 
 	private getWoodTypeSring(woodType: WoodType): string {
-	    
+	    return '';
 	}
 }

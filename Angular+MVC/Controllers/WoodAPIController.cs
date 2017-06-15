@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Angular_MVC.DBContext;
+using Angular_MVC.Models;
 
 namespace Angular_MVC.Controllers
 {
@@ -13,7 +14,8 @@ namespace Angular_MVC.Controllers
         public HttpResponseMessage Get()
         {
             var result = WoodDB.Product.AsEnumerable();
-            return ToJson(result);
+            var woodProductViewModels = result.Select(x => new WoodProductViewModel(x)).ToList();
+            return ToJson(woodProductViewModels);
         }
 
         public async Task<HttpResponseMessage> Post([FromBody] Product value)

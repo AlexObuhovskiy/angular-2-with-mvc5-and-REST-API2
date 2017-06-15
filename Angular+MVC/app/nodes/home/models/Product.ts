@@ -1,7 +1,9 @@
 ﻿export class ProductModel {
     Id: number;
     Type: ProductType;
+    TypeAsString: string;
     WoodType: WoodType;
+    WoodTypeAsString: string;
     Length: number;
     Width: number;
     Price: number;

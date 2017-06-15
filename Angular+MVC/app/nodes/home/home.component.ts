@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
         this.woodService.getProducts()
             .subscribe((product: ProductModel[]) => {
                 this.products = product;
+                console.log(this.products);
             });
     }
 }
